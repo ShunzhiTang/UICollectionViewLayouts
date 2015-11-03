@@ -54,7 +54,6 @@
         attrs.transform = CGAffineTransformMakeScale(scale, scale);
         
     }
-    
     return array;
 }
 

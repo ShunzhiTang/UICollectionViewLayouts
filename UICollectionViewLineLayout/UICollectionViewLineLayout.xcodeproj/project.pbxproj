@@ -15,7 +15,8 @@
 		24DF8BE71BE8271B0002B0C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DF8BE51BE8271B0002B0C9 /* LaunchScreen.storyboard */; };
 		24DF8BF41BE82EA80002B0C9 /* TSZImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DF8BF21BE82EA80002B0C9 /* TSZImageCell.m */; settings = {ASSET_TAGS = (); }; };
 		24DF8BF51BE82EA80002B0C9 /* TSZImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DF8BF31BE82EA80002B0C9 /* TSZImageCell.xib */; settings = {ASSET_TAGS = (); }; };
-		24DF8BF81BE8353F0002B0C9 /* TSZLineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DF8BF71BE8353F0002B0C9 /* TSZLineLayout.m */; settings = {ASSET_TAGS = (); }; };
+		24DF8BFC1BE841380002B0C9 /* TSZLineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DF8BFB1BE841380002B0C9 /* TSZLineLayout.m */; settings = {ASSET_TAGS = (); }; };
+		24DF8BFF1BE8421A0002B0C9 /* TSZCircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DF8BFE1BE8421A0002B0C9 /* TSZCircleLayout.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +33,10 @@
 		24DF8BF11BE82EA80002B0C9 /* TSZImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSZImageCell.h; sourceTree = "<group>"; };
 		24DF8BF21BE82EA80002B0C9 /* TSZImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSZImageCell.m; sourceTree = "<group>"; };
 		24DF8BF31BE82EA80002B0C9 /* TSZImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSZImageCell.xib; sourceTree = "<group>"; };
-		24DF8BF61BE8353F0002B0C9 /* TSZLineLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSZLineLayout.h; sourceTree = "<group>"; };
-		24DF8BF71BE8353F0002B0C9 /* TSZLineLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSZLineLayout.m; sourceTree = "<group>"; };
+		24DF8BFA1BE841380002B0C9 /* TSZLineLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSZLineLayout.h; sourceTree = "<group>"; };
+		24DF8BFB1BE841380002B0C9 /* TSZLineLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSZLineLayout.m; sourceTree = "<group>"; };
+		24DF8BFD1BE8421A0002B0C9 /* TSZCircleLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSZCircleLayout.h; sourceTree = "<group>"; };
+		24DF8BFE1BE8421A0002B0C9 /* TSZCircleLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSZCircleLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,7 @@
 		24DF8BD61BE8271B0002B0C9 /* UICollectionViewLineLayout */ = {
 			isa = PBXGroup;
 			children = (
+				24DF8BF91BE841380002B0C9 /* Layout */,
 				24DF8BF01BE82E4A0002B0C9 /* View */,
 				24DF8BDA1BE8271B0002B0C9 /* AppDelegate.h */,
 				24DF8BDB1BE8271B0002B0C9 /* AppDelegate.m */,
@@ -92,8 +96,6 @@
 			children = (
 				24DF8BDD1BE8271B0002B0C9 /* ViewController.h */,
 				24DF8BDE1BE8271B0002B0C9 /* ViewController.m */,
-				24DF8BF61BE8353F0002B0C9 /* TSZLineLayout.h */,
-				24DF8BF71BE8353F0002B0C9 /* TSZLineLayout.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -106,6 +108,17 @@
 				24DF8BF31BE82EA80002B0C9 /* TSZImageCell.xib */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		24DF8BF91BE841380002B0C9 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				24DF8BFA1BE841380002B0C9 /* TSZLineLayout.h */,
+				24DF8BFB1BE841380002B0C9 /* TSZLineLayout.m */,
+				24DF8BFD1BE8421A0002B0C9 /* TSZCircleLayout.h */,
+				24DF8BFE1BE8421A0002B0C9 /* TSZCircleLayout.m */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,8 +193,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				24DF8BDF1BE8271B0002B0C9 /* ViewController.m in Sources */,
-				24DF8BF81BE8353F0002B0C9 /* TSZLineLayout.m in Sources */,
 				24DF8BF41BE82EA80002B0C9 /* TSZImageCell.m in Sources */,
+				24DF8BFC1BE841380002B0C9 /* TSZLineLayout.m in Sources */,
+				24DF8BFF1BE8421A0002B0C9 /* TSZCircleLayout.m in Sources */,
 				24DF8BDC1BE8271B0002B0C9 /* AppDelegate.m in Sources */,
 				24DF8BD91BE8271B0002B0C9 /* main.m in Sources */,
 			);

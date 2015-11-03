@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "TSZImageCell.h"
 #import "TSZLineLayout.h"
-
+#import "TSZCircleLayout.h"
 @interface ViewController ()<UICollectionViewDataSource , UICollectionViewDelegate>
 
 //图片名
@@ -28,14 +28,14 @@ static   NSString *ID = @"image";
     //创建collectionView 的 frame
     CGFloat w = self.view.frame.size.width;
     
-    CGRect rect =  CGRectMake(0 ,100 , w , 200 );
-    
+    CGRect rect =  CGRectMake(0 ,100 , w , 300 );
     
     //创建 布局
-    TSZLineLayout *layout = [[TSZLineLayout alloc] init];
+//    TSZLineLayout *layout = [[TSZLineLayout alloc] init];
+    TSZCircleLayout *layoutCircle = [[TSZCircleLayout alloc] init];
     
     //创建uicollectionView
-    UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:rect collectionViewLayout:layout];
+    UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:rect collectionViewLayout:layoutCircle];
     
     collectionView.dataSource = self;
     collectionView.delegate = self;
