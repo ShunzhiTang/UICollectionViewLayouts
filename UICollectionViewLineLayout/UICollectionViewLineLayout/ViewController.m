@@ -10,6 +10,9 @@
 #import "TSZImageCell.h"
 #import "TSZLineLayout.h"
 #import "TSZCircleLayout.h"
+#import "TSZStackLayout.h"
+
+
 @interface ViewController ()<UICollectionViewDataSource , UICollectionViewDelegate>
 
 //图片名
@@ -20,7 +23,7 @@
 
 @implementation ViewController
 
-static   NSString *ID = @"image";
+static   NSString  const *ID = @"image";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,10 +35,12 @@ static   NSString *ID = @"image";
     
     //创建 布局
 //    TSZLineLayout *layout = [[TSZLineLayout alloc] init];
-    TSZCircleLayout *layoutCircle = [[TSZCircleLayout alloc] init];
+//    TSZCircleLayout *layoutCircle = [[TSZCircleLayout alloc] init];
+    
+    TSZStackLayout *layoutStack = [[TSZStackLayout alloc] init];
     
     //创建uicollectionView
-    UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:rect collectionViewLayout:layoutCircle];
+    UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:rect collectionViewLayout:layoutStack];
     
     collectionView.dataSource = self;
     collectionView.delegate = self;
@@ -47,8 +52,6 @@ static   NSString *ID = @"image";
     [self.view addSubview:collectionView];
     
     self.collectionView = collectionView;
-    
-    
 }
 
 #pragma mark 实现UICollectionView的 代理方法
@@ -64,6 +67,28 @@ static   NSString *ID = @"image";
     cell.imageName = self.images[indexPath.row];
 //    cell,
     return cell;
+}
+
+#pragma mark 实现代理方法
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    //删除点击cell 对应的数据
+    
+    [self.images removeObjectAtIndex:indexPath.item];
+    
+    [self.collectionView  deleteItemsAtIndexPaths:@[indexPath]];
+}
+
+
+#pragma mark  点击 屏幕
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    if ([self.collectionView.collectionViewLayout  isKindOfClass:[TSZStackLayout class]]) {
+        
+        [self.collectionView setCollectionViewLayout:[[TSZCircleLayout alloc]init] animated:YES];
+    }else if([self.collectionView.collectionViewLayout  isKindOfClass:[TSZCircleLayout class]]){
+        [self.collectionView setCollectionViewLayout:[[TSZStackLayout alloc]init] animated:YES];
+    }
 }
 
 #pragma mark 懒加载

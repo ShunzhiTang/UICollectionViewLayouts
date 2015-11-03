@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2473E23D1BE88EC60097FB34 /* TSZStackLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2473E23C1BE88EC60097FB34 /* TSZStackLayout.m */; settings = {ASSET_TAGS = (); }; };
 		24DF8BD91BE8271B0002B0C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DF8BD81BE8271B0002B0C9 /* main.m */; };
 		24DF8BDC1BE8271B0002B0C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DF8BDB1BE8271B0002B0C9 /* AppDelegate.m */; };
 		24DF8BDF1BE8271B0002B0C9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DF8BDE1BE8271B0002B0C9 /* ViewController.m */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2473E23B1BE88EC60097FB34 /* TSZStackLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSZStackLayout.h; sourceTree = "<group>"; };
+		2473E23C1BE88EC60097FB34 /* TSZStackLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSZStackLayout.m; sourceTree = "<group>"; };
 		24DF8BD41BE8271B0002B0C9 /* UICollectionViewLineLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICollectionViewLineLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DF8BD81BE8271B0002B0C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		24DF8BDA1BE8271B0002B0C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -117,6 +120,8 @@
 				24DF8BFB1BE841380002B0C9 /* TSZLineLayout.m */,
 				24DF8BFD1BE8421A0002B0C9 /* TSZCircleLayout.h */,
 				24DF8BFE1BE8421A0002B0C9 /* TSZCircleLayout.m */,
+				2473E23B1BE88EC60097FB34 /* TSZStackLayout.h */,
+				2473E23C1BE88EC60097FB34 /* TSZStackLayout.m */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2473E23D1BE88EC60097FB34 /* TSZStackLayout.m in Sources */,
 				24DF8BDF1BE8271B0002B0C9 /* ViewController.m in Sources */,
 				24DF8BF41BE82EA80002B0C9 /* TSZImageCell.m in Sources */,
 				24DF8BFC1BE841380002B0C9 /* TSZLineLayout.m in Sources */,
@@ -346,6 +352,7 @@
 				24DF8BED1BE8271B0002B0C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
